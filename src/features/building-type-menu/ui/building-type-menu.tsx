@@ -2,15 +2,15 @@ import React from 'react'
 import style from './building-type-menu.module.scss'
 import { CityIcon, CommercialIcon, IndustrialIcon, ResidentIcon, SpecialIcon } from '@/shared/icons'
 
-const BUILDING_TYPES = ['CITY', 'COMMERCIAL', 'INDUSTRIAL', 'RESIDENT', 'SPECIAL'] as const
+const BUILDING_TYPES = ['RESIDENT', 'COMMERCIAL', 'INDUSTRIAL', 'CITY', 'SPECIAL'] as const
 
 type BuildingType = typeof BUILDING_TYPES[number]
 
 const icons: Record<BuildingType, React.ReactNode> = {
-  CITY: <CityIcon />,
+  RESIDENT: <ResidentIcon />,
   COMMERCIAL: <CommercialIcon />,
   INDUSTRIAL: <IndustrialIcon />,
-  RESIDENT: <ResidentIcon />,
+  CITY: <CityIcon />,
   SPECIAL: <SpecialIcon />,
 }
 
