@@ -13,12 +13,9 @@ interface BuildingCardProps {
 export const BuildingCard: React.FC<BuildingCardProps> = ({ building, level, onLevelChange }) => {
   return (
     <div className={styles.buildingCard}>
-      <div className={styles.buildingImage}>
-        <img src={`https://cdn.city-holder.com/${building.object_image}`} alt={building.name_ru} />
-      </div>
+      <p className={styles.buildingLevel}>{level}</p>
       <div className={styles.buildingInfo}>
-        <h3>{building.name_ru}</h3>
-        <p>Уровень: {level}</p>
+        <h3 className={styles.buildingTitle}>{building.name_ru}</h3>
         <p><Population /> {building.population.toLocaleString('ru-RU')}</p>
         <p><Coin /> {building.income_per_hour.toLocaleString('ru-RU')}</p>
         <p><Coin /> {building.cost.toLocaleString('ru-RU')}</p>
@@ -26,6 +23,9 @@ export const BuildingCard: React.FC<BuildingCardProps> = ({ building, level, onL
           <button onClick={() => onLevelChange(building.id, -1)}>-</button>
           <button onClick={() => onLevelChange(building.id, 1)}>+</button>
         </div>
+      </div>
+      <div className={styles.buildingImage}>
+        <img src={`https://cdn.city-holder.com/${building.object_image}`} alt={building.name_ru} />
       </div>
     </div>
   )

@@ -29,15 +29,14 @@ body {
 .objects {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 20px;
 }
 
 .object {
-  width: calc(25% - 15px);
   padding: 10px;
   border: 1px solid #444444;
   border-radius: 5px;
-  margin-bottom: 20px;
   background-color: #2a2a2a;
   display: flex;
   flex-direction: column;
