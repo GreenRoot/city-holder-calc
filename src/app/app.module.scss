@@ -1,3 +1,8 @@
+body {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
 .tabs {
   display: flex;
   margin-bottom: 20px;
@@ -9,35 +14,50 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  background-color: #ddd;
+  background-color: #333333;
+  color: #ffffff;
 }
 
 .tabs button:hover {
-  background-color: #ccc;
+  background-color: #444444;
 }
 
 .tabs button.activeTab {
-  background-color: #bbb;
+  background-color: #555555;
 }
 
 .objects {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .object {
+  width: calc(25% - 15px);
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #444444;
   border-radius: 5px;
-  margin: 10px;
-  background-color: #f9f9f9;
-  width: calc(33.333% - 20px);
-  box-sizing: border-box;
+  margin-bottom: 20px;
+  background-color: #2a2a2a;
+  display: flex;
+  flex-direction: column;
 }
 
-.object img {
-  max-width: 100%;
-  height: auto;
+.objectInfo {
+  flex: 1;
+}
+
+.objectImage {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+.objectImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
 }
 
 .controls {
@@ -47,12 +67,13 @@
 .controls button {
   padding: 5px 10px;
   margin-right: 5px;
-  background-color: #ddd;
-  border: 1px solid #ccc;
+  background-color: #444444;
+  border: 1px solid #555555;
   border-radius: 3px;
   cursor: pointer;
+  color: #ffffff;
 }
 
 .controls button:hover {
-  background-color: #ccc;
+  background-color: #555555;
 }
