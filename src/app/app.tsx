@@ -1,21 +1,22 @@
 import { useState } from 'react'
+import { BuildingTypeMenu } from '@/features/building-type-menu'
 import { BuildingCard, GameObject } from '@/features/building-card'
 import { api } from '@/entities/objects'
 import style from './app.module.scss'
 
+const BUILDING_TYPES = ['CITY', 'COMMERCIAL', 'INDUSTRIAL', 'RESIDENT', 'SPECIAL'] as const
+type BuildingType = typeof BUILDING_TYPES[number]
+
 export const App = () => {
-  const [selectedType, setSelectedType] = useState<string>('')
+  const [selectedType, setSelectedType] = useState<BuildingType>('COMMERCIAL')
   const [levels, setLevels] = useState<Record<string, number>>({})
   const gameObjects: GameObject[] = api().flat()
-
-  // Получение уникальных типов (категорий) для отображения табов
-  const types = Array.from(new Set(gameObjects.map((item) => item.type)))
 
   // Фильтрация данных по level и выбранному type
   const filteredObjects = gameObjects.filter(
     (object) =>
       object.level === (levels[object.id] || 1) &&
-      (selectedType === '' || object.type === selectedType),
+      object.type === selectedType
   )
 
   // Получение максимального уровня для каждого объекта
@@ -39,24 +40,7 @@ export const App = () => {
 
   return (
     <div>
-      {/* Табы для фильтрации по типу */}
-      <div className={style.tabs}>
-        <button
-          className={selectedType === '' ? style.activeTab : ''}
-          onClick={() => setSelectedType('')}
-        >
-          Все
-        </button>
-        {types.map((type) => (
-          <button
-            key={type}
-            className={selectedType === type ? style.activeTab : ''}
-            onClick={() => setSelectedType(type)}
-          >
-            {type}
-          </button>
-        ))}
-      </div>
+      <BuildingTypeMenu selectedType={selectedType} onTypeSelect={setSelectedType} />
 
       {/* Отображение отфильтрованных данных */}
       <div className={style.objects}>

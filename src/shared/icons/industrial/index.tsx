@@ -1,0 +1,3 @@
+export const IndustrialIcon = () => {
+  return <div><svg width="29" height="24" viewBox="0 0 29 24" fill="current" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" fill="current" d="M18.6881 1H24.4023V23H21.5452V15.6667H18.6881V23H4.40234V5.4L18.6881 9.8V1ZM15.8309 15.6667V18.6H12.9738V15.6667H15.8309ZM10.1166 15.6667H7.25949V18.6H10.1166V15.6667Z"></path></svg></div>
+}

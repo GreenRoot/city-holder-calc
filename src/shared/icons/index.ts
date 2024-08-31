@@ -1,0 +1,5 @@
+export { CityIcon } from './city'
+export { CommercialIcon } from './comertial'
+export { IndustrialIcon } from './industrial'
+export { ResidentIcon } from './resident'
+export { SpecialIcon } from './special'
