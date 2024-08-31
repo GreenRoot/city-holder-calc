@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import { api } from '../entities/objects'
+import { BuildingCard, GameObject } from '@/features/building-card'
+import { api } from '@/entities/objects'
 import style from './app.module.scss'
-import { BuildingCard, GameObject } from '../features/building-card'
 
 export const App = () => {
   const [selectedType, setSelectedType] = useState<string>('')

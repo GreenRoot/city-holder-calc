@@ -1,6 +1,6 @@
 import React from 'react'
-import { Coin } from '../../../shared/coin'
-import { Population } from '../../../shared/population'
+import { Coin } from '@/shared/coin'
+import { Population } from '@/shared/population'
 import { GameObject } from '../types/'
 import styles from './building-card.module.scss'
 
