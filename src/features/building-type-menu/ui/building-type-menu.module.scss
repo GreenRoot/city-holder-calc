@@ -35,7 +35,8 @@
   }
 }
 
-.city {
+
+.resident {
   &.active {
     background-color: #569FF4;
   }
@@ -53,7 +54,7 @@
   }
 }
 
-.resident {
+.city {
   &.active {
     background-color: #B3ACFD;
   }
@@ -61,6 +62,6 @@
 
 .special {
   &.active {
-    background-color: #B3ACFD;
+    background-color: #FC4A62;
   }
 }
