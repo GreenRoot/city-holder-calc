@@ -20,12 +20,14 @@
   align-items: center;
   cursor: pointer;
   border-radius: 5px;
-  transition: background-color 0.3s;
+  transition: background-color 0.5s;
+
 
   svg {
     width: 24px;
     height: 24px;
     fill: white;
+    transition: fill 0.3s;
   }
 
   &.active {
