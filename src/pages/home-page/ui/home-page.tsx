@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { BuildingTypeMenu } from '@/features/building-type-menu'
 import { BuildingCard } from '@/features/building-card'
 import { api, GameObject } from '@/entities/objects'
+import { Link } from 'react-router-dom'
 import style from './home-page.module.scss'
 
 const BUILDING_TYPES = ['RESIDENT', 'COMMERCIAL', 'INDUSTRIAL', 'CITY', 'SPECIAL'] as const
@@ -41,6 +42,9 @@ export const HomePage = () => {
   return (
     <div>
       <BuildingTypeMenu selectedType={selectedType} onTypeSelect={setSelectedType} />
+      <div className={style.tableLink}>
+        <Link to="/table">Перейти к таблице</Link>
+      </div>
 
       {/* Отображение отфильтрованных данных */}
       <div className={style.objects}>
