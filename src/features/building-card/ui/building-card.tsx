@@ -1,7 +1,7 @@
 import React from 'react'
 import { Coin } from '@/shared/icons/coin'
 import { Population } from '@/shared/icons/population'
-import { GameObject } from '../types/'
+import { GameObject } from '@/entities/objects'
 import styles from './building-card.module.scss'
 
 interface BuildingCardProps {
