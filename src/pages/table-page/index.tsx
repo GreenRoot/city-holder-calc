@@ -1,0 +1,1 @@
+export { TablePage } from './ux/table-page'

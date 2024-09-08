@@ -1,3 +1,2 @@
-import { api } from './model/api'
-
-export { api }
+export { api } from './model/api'
+export type { GameObject } from './types'
